@@ -42,12 +42,9 @@ bool LuaLinker::Link(void)
     {
         unsigned int base = 0; // TODO: check base address of the module in the context of the owning process
 
-        //LOGGER.LogMessage("%s checksum: 0x%08x.\n", procFileName, checksum);
-
         switch (checksum)
         {
         case SUPCOM_1_5_3656:
-            //LOGGER.LogMessage("Adding offset 0x7A0 for Supreme Commander Forged Alliance 1.5.3656");
             base += 0x7A0;
         }
 
@@ -55,7 +52,6 @@ bool LuaLinker::Link(void)
         {
         case SUPCOM_1_5_3656:
         case SUPCOM_1_5_3599: // Supreme Commander Forged Alliance 1.5.3599 official version
-            //LOGGER.LogMessage("Found Supreme Commander Forged Alliance 1.5.3599 version.\n");
 
             // ----------
             // lua.h
@@ -192,9 +188,7 @@ bool LuaLinker::Link(void)
             // ----------
             // lauxlib.h
             // ----------
-
-  
-            //LOGGER.LogMessage("luaL_openlib is at 0x%08x.\n\n", base + 0x0090D660);
+ 
             luaL_openlib        = (lualinkerL_openlib*)(base + 0x0090D660);
 
             luaL_getmetafield   = (lualinkerL_getmetafield)(base + 0x0090D5A0);
@@ -250,10 +244,6 @@ bool LuaLinker::Link(void)
             // ----------
 
             luaopen_io = (lualinkeropen_io)(base + 0x00917410);
-
-
-
-
 
             return true;
         default: // unknown checksum

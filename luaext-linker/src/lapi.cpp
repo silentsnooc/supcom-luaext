@@ -1,6 +1,6 @@
 // See copyright notice in scse_copyright.txt
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "lua.h"
 
 //lualinker_atpanic lua_atpanic; // SupCom haven't definition for this function

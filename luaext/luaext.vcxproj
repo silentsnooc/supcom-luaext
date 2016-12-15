@@ -90,12 +90,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>LUA_EXTENSION_EXPORTS;WIN32;_DEBUG;_WINDOWS;_USRDLL;LUAEXTENSION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)luaext_linker\include;$(SolutionDir)lua-5.0.1\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)luaext-linker\include;$(SolutionDir)lua-5.0.1\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>luaext_linker.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>luaext-linker.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Debug</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
@@ -162,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\libs\ai\ai.cpp" />
-    <ClCompile Include="src\luaext.cpp" />
     <ClCompile Include="src\luaext.cpp" />
     <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

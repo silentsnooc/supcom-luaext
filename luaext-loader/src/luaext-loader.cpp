@@ -4,7 +4,7 @@
 #include "stdafx.h"
 
 
-int main()
+int _tmain(int argc, WCHAR* argv[])
 {
     return 0;
 }
