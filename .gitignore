@@ -1,0 +1,7 @@
+*.db
+*.opendb
+ipch/
+.vs/
+Debug/
+*.user
+*.filters
