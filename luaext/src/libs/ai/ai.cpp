@@ -10,7 +10,12 @@
 
 static int luaAi_helloworld(lua_State *L)
 {
-	MessageBox(NULL, L"Hello World", L"", MB_OK);
+    double d = lua_tonumber(L, 1);
+
+    std::wostringstream strs;
+    strs << d;
+
+	MessageBox(NULL, (std::wstring(L"Hello World") + std::wstring(strs.str())).c_str(), L"", MB_OK);
 	return 1;
 }
 
